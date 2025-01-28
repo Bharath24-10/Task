@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Task Manager</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>📝 Task Manager</h1>
+        <p>Keep track of your tasks effortlessly!</p>
+    </header>
+    <main>
+        <!-- Add Task Section -->
+        <section id="add-task">
+            <h2>➕ Add a New Task</h2>
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-title">Task Title:</label>
+                    <input type="text" id="task-title" placeholder="Enter task title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="task-desc">Task Description:</label>
+                    <textarea id="task-desc" rows="4" placeholder="Enter task description"></textarea>
+                </div>
+                
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <!-- Task List Section -->
+        <section id="task-list">
+            <h2>📋 Your Task List</h2>
+            <ul id="tasks">
+                <li class="empty-state">No tasks available. Add a new task to get started!</li>
+                <!-- Dynamic tasks will appear here -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Task Manager App | Built with ❤️ by Jayashree</p>
+    </footer>
+    <script src="/script.js"></script>
+</body>
+</html>

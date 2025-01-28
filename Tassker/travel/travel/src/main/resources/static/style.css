@@ -1,0 +1,193 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eef2f7;
+    color: #2c3e50;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Add Task Section */
+#add-task {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+}
+
+#add-task:hover {
+    transform: scale(1.02);
+}
+
+#add-task h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+#add-task form input,
+#add-task form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 8px;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#add-task form input:focus,
+#add-task form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+#add-task form button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    display: block;
+    margin: auto;
+}
+
+#add-task form button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Task List Section */
+#task-list {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+#task-list h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+#tasks li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f9fc;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s, background-color 0.3s;
+    border: 1px solid #dcdde1;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#tasks li:hover {
+    transform: translateY(-5px);
+    background-color: #ecf3fc;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 15px;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    #add-task, #task-list {
+        padding: 20px;
+    }
+    #add-task form button {
+        width: 100%;
+    }
+}
